@@ -1,6 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #202124;
+  --gray: #5f6368;
+  --blue: #8ab4f8;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-wrapper {
+  border: 2px solid var(--gray);
+  min-width: 450px;
+  min-height: 650px;
+  padding: 30px;
+  box-shadow: 3px 6px 40px #000;
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  color: var(--white);
+  text-align: center;
+  font-size: 40px;
+  margin: 30px 0;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-input {
+  outline: none;
+  width: 280px;
+  padding: 15px;
+  font-size: 18px;
+  color: var(--white);
+  background-color: var(--black);
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+}
+
+.button-add {
+  width: 80px;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--blue);
+  cursor: pointer;
+}
+
+.list-item {
+  display: flex;
+  margin: 25px 0;
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  padding: 10px 20px;
+  max-height: 300px;
+  justify-content: space-between;
+}
+
+.button-complete,
+.button-delete,
+.button-edit {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 23px;
+  border-radius: 50%;
+}
+
+.button-complete {
+  color: #009e04;
+  margin-right: 10px;
+}
+
+.button-edit {
+  color: #ff7900;
+  margin-right: 10px;
+}
+
+.button-delete {
+  color: #cd0001;
+}
+
+.complete {
+  text-decoration-style: solid;
+  text-decoration-line: line-through;
+  text-decoration-color: red;
+  opacity: 0.6;
+}
+
+.list {
+  width: 220px;
+  background-color: var(--black);
+  border: none;
+  color: var(--white);
+  font-size: 16px;
+}
+
+input:focus,
+button:focus {
+  outline: none;
 }
